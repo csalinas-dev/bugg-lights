@@ -46,7 +46,6 @@ const Splash = () => {
             height: '100%',
             aspectRatio: 1 / 1,
             width: 'auto',
-            filter: 'drop-shadow(2px 2px 5px rgba(255, 255, 255, 0.25))',
             maxWidth: '500px',
           }}
           width={500}

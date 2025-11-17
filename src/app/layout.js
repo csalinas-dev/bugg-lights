@@ -21,6 +21,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <title>The Bugg Lights</title>
+        <meta name="apple-mobile-web-app-title" content="Bugg Lights" />
+      </head>
       <body className={`${breeSerif.variable} ${nunito.variable}`}>
         <Providers>
           {children}

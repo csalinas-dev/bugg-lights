@@ -29,7 +29,7 @@ const Footer = () => {
         }}
         columns={{ xs: 1, md: 3 }}
       >
-        <Grid item xs={1}>
+        <Grid size={1}>
           <Typography
             variant="body1"
             sx={{
@@ -96,7 +96,7 @@ const Footer = () => {
             Gallery
           </Typography>
         </Grid> */}
-        <Grid item xs={1}>
+        <Grid size={1}>
           <Box sx={{ display: 'flex', gap: '1rem', marginBottom: '1rem' }}>
             <a href="https://www.instagram.com/bugglights/" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faInstagram} style={{ color: '#C6C3BA', fontSize: '1.5rem' }} />

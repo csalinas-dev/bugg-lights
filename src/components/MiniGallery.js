@@ -47,7 +47,7 @@ const MiniGallery = () => {
         columns={{ xs: 1, sm: 2, md: 4 }}
       >
         {images.map((src, index) => (
-          <Grid item xs={1} key={index}>
+          <Grid size={1} key={index}>
             <Box
               sx={{
                 cursor: 'pointer',

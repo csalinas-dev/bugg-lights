@@ -41,7 +41,7 @@ const Sponsorship = () => {
           }}
         >
           The Bugg Lights display is free for everyone. We rely on the help of individuals and businesses
-          to provide hot chocolate, supplies, and additional improvements to the experience.
+          to provide hot chocolate, candy canes, and other supplies for the patrons' experience.
           Your support helps us keep the tradition alive for families across Albuquerque.
         </Typography>
         {/* <Button

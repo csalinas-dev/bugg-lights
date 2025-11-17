@@ -56,7 +56,7 @@ const RulesCourtesies = () => {
             • {bullet}
           </Typography>
         ))}
-        <Button
+        {/* <Button
           variant="outlined"
           sx={{
             marginTop: '2rem',
@@ -69,7 +69,7 @@ const RulesCourtesies = () => {
           }}
         >
           View All Rules & Courtesies
-        </Button>
+        </Button> */}
       </Box>
     </Box>
   );

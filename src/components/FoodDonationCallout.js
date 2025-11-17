@@ -43,7 +43,7 @@ const FoodDonationCallout = () => {
           We collect non-perishable food items throughout the season to support Storehouse Albuquerque.
           Visitors are encouraged to bring canned goods or pantry staples when they come enjoy the lights.
         </Typography>
-        <Button
+        {/* <Button
           variant="contained"
           sx={{
             backgroundColor: '#4CAF50',
@@ -54,7 +54,7 @@ const FoodDonationCallout = () => {
           }}
         >
           What to Bring
-        </Button>
+        </Button> */}
       </Box>
     </Box>
   );

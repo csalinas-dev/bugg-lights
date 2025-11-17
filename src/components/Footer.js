@@ -49,7 +49,8 @@ const Footer = () => {
             Albuquerque, New Mexico
           </Typography>
         </Grid>
-        <Grid item xs={1}>
+        {/* Commented out links to other pages for homepage-only publish */}
+        {/* <Grid item xs={1}>
           <Typography
             variant="body2"
             sx={{
@@ -94,11 +95,15 @@ const Footer = () => {
           >
             Gallery
           </Typography>
-        </Grid>
+        </Grid> */}
         <Grid item xs={1}>
           <Box sx={{ display: 'flex', gap: '1rem', marginBottom: '1rem' }}>
-            <FontAwesomeIcon icon={faInstagram} style={{ color: '#C6C3BA', fontSize: '1.5rem' }} />
-            <FontAwesomeIcon icon={faTiktok} style={{ color: '#C6C3BA', fontSize: '1.5rem' }} />
+            <a href="https://www.instagram.com/bugglights/" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faInstagram} style={{ color: '#C6C3BA', fontSize: '1.5rem' }} />
+            </a>
+            <a href="https://www.tiktok.com/@bugglights" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faTiktok} style={{ color: '#C6C3BA', fontSize: '1.5rem' }} />
+            </a>
           </Box>
         </Grid>
       </Grid>

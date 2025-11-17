@@ -15,7 +15,7 @@ export default function Home() {
       <FoodDonationCallout />
       <PlanYourVisit />
       <Sponsorship />
-      <MiniGallery />
+      {/* <MiniGallery /> */}
       <RulesCourtesies />
       <Footer />
     </div>

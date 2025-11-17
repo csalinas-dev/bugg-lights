@@ -44,7 +44,7 @@ const Sponsorship = () => {
           to provide hot chocolate, supplies, and additional improvements to the experience.
           Your support helps us keep the tradition alive for families across Albuquerque.
         </Typography>
-        <Button
+        {/* <Button
           variant="contained"
           sx={{
             backgroundColor: '#FFD700', // Bright color for CTA
@@ -55,7 +55,7 @@ const Sponsorship = () => {
           }}
         >
           Sponsor the Cocoa Stand
-        </Button>
+        </Button> */}
       </Box>
     </Box>
   );

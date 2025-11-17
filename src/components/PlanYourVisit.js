@@ -51,11 +51,12 @@ const PlanYourVisit = () => {
           maxWidth: '1200px',
           width: '100%',
           justifyContent: 'center',
+          flexDirection: { xs: 'column', md: 'row' },
         }}
         columns={{ xs: 1, md: 3 }}
       >
         {cards.map((card, index) => (
-          <Grid item xs={1} key={index}>
+          <Grid item xs={1} md={1} key={index}>
             <Card
               sx={{
                 backgroundColor: '#0F0E0C',

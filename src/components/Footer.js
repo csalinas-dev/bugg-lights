@@ -100,15 +100,6 @@ const Footer = () => {
             <FontAwesomeIcon icon={faInstagram} style={{ color: '#C6C3BA', fontSize: '1.5rem' }} />
             <FontAwesomeIcon icon={faTiktok} style={{ color: '#C6C3BA', fontSize: '1.5rem' }} />
           </Box>
-          <Typography
-            variant="body2"
-            sx={{
-              fontFamily: 'var(--font-nunito)',
-              fontSize: '0.75rem',
-            }}
-          >
-            Not affiliated with the Bugg Lights Museum.
-          </Typography>
         </Grid>
       </Grid>
     </Box>

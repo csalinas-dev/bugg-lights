@@ -1,14 +1,15 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Bree_Serif, Nunito } from "next/font/google";
 import "./globals.css";
 import { Providers } from "../components/Providers";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const breeSerif = Bree_Serif({
+  variable: "--font-bree-serif",
   subsets: ["latin"],
+  weight: "400",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const nunito = Nunito({
+  variable: "--font-nunito",
   subsets: ["latin"],
 });
 
@@ -20,7 +21,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${breeSerif.variable} ${nunito.variable}`}>
         <Providers>
           {children}
         </Providers>

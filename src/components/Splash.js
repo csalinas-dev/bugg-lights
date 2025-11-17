@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { Box } from '@mui/material';
+import { Box, Stack } from '@mui/material';
 import Image from 'next/image';
 
 const Splash = () => {
@@ -14,40 +14,44 @@ const Splash = () => {
       }}
     >
       <Image
-        src="/background-expanded.jpg"
         alt="Background"
-        width={6000}
         height={5000}
+        priority
+        src="/background-expanded.jpg"
         style={{
-          width: '100%',
-          objectFit: "cover",
           height: 'auto',
           minHeight: '60vh',
+          objectFit: "cover",
+          width: '100%',
         }}
-        priority
+        width={6000}
       />
-      <Box
+      <Stack direction="row" alignItems="center" justifyContent="space-evenly"
         sx={{
-          alignItems: 'top',
+          aspectRatio: 6 / 2,
           display: 'flex',
-          height: '100%',
-          justifyContent: 'center',
           left: 0,
+          minHeight: '24vh',
           position: 'absolute',
           top: 0,
           width: '100%',
         }}
       >
         <Image
-          src="/logo.png"
           alt="Logo"
-          width={300}
-          height={300}
+          height={500}
+          src="/logo.png"
           style={{
             objectFit: 'contain',
+            height: '100%',
+            aspectRatio: 1 / 1,
+            width: 'auto',
+            filter: 'drop-shadow(2px 2px 5px rgba(255, 255, 255, 0.25))',
+            maxWidth: '500px',
           }}
+          width={500}
         />
-      </Box>
+      </Stack>
     </Box>
   );
 };

@@ -8,7 +8,7 @@ const PlanYourVisit = () => {
     {
       title: 'Display Hours',
       text: 'The lights turn on nightly from 5:00 pm to 10:00 pm, beginning Thanksgiving and running through New Year’s Day.',
-      note: 'Walk the sidewalk, take photos, and enjoy the display at your own pace.',
+      note: 'Walk the sidewalk, driveway, and patio; take photos; and enjoy the display at your own pace. Make sure to tag us @bugglights!',
     },
     {
       title: 'Meet Santa',
@@ -18,7 +18,7 @@ const PlanYourVisit = () => {
     {
       title: 'Free Hot Chocolate',
       text: 'On Friday and Saturday evenings, volunteers serve free hot chocolate, made possible by generous community sponsors.',
-      note: 'Find the cocoa station along the sidewalk near the main walkway.',
+      note: 'Find the cocoa station by the penguin exhibit located in the patio (enter by the front door).',
     },
   ];
 

@@ -40,7 +40,7 @@ const Splash = () => {
         <Image
           alt="Logo"
           height={500}
-          src="/logo.png"
+          src="/logo-glowing.png"
           style={{
             objectFit: 'contain',
             height: '100%',

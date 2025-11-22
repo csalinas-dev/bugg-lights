@@ -14,7 +14,7 @@ const Splash = () => {
       }}
     >
       <Image
-        alt="Background"
+        alt="The Bugg Lights Christmas Light Display in Albuquerque, New Mexico."
         height={5000}
         priority
         src="/background-expanded.jpg"
@@ -38,7 +38,7 @@ const Splash = () => {
         }}
       >
         <Image
-          alt="Logo"
+          alt="The Bugg Lights Logo with a glowing effect"
           height={500}
           src="/logo-glowing.png"
           style={{

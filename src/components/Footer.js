@@ -39,7 +39,7 @@ const Footer = () => (
       columns={{ xs: 1, md: 3 }}
     >
       <Grid size={1} component={Stack} alignItems="center" justifyContent="center">
-        <Image src="/logo.png" width={250} height={250} />
+        <Image src="/logo.png" width={250} height={250} alt="The Bugg Lights Logo" />
       </Grid>
       <Grid size={1} component={Stack} alignItems="center" justifyContent="center">
         <Box sx={{ textAlign: { xs: "center", md: "left" } }}>

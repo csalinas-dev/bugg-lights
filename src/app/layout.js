@@ -1,8 +1,10 @@
+import { GoogleAnalytics } from '@next/third-parties/google';
 import { Bree_Serif, Nunito } from "next/font/google";
-import "./global.css";
 
 import { Providers } from "@/components/Providers";
 import Footer from "@/components/Footer";
+
+import "./global.css";
 
 const breeSerif = Bree_Serif({
   variable: "--font-bree-serif",
@@ -32,6 +34,7 @@ export default function RootLayout({ children }) {
           <Footer />
         </Providers>
       </body>
+      <GoogleAnalytics gaId="G-PGG79P0BWQ" />
     </html>
   );
 }

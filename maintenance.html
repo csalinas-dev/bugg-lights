@@ -51,6 +51,19 @@
     <div class="container">
         <h1>The Bugg Lights</h1>
         <p>The site is down for maintenance and will be back online soon.</p>
+        <p id="countdown">Refreshing in 15 seconds...</p>
     </div>
+    <script>
+        let countdown = 15;
+        const countdownElement = document.getElementById('countdown');
+        const interval = setInterval(() => {
+            countdown--;
+            countdownElement.textContent = `Refreshing in ${countdown} seconds...`;
+            if (countdown === 0) {
+                clearInterval(interval);
+                location.reload();
+            }
+        }, 1000);
+    </script>
 </body>
 </html>

@@ -26,7 +26,7 @@ const Splash = () => {
         }}
         width={6000}
       />
-      <Stack direction="row" alignItems="center" justifyContent="space-evenly"
+      <Stack direction="row" alignItems="center" justifyContent="center"
         sx={{
           aspectRatio: 6 / 2,
           display: 'flex',
@@ -34,6 +34,7 @@ const Splash = () => {
           maxWidth: '100vw',
           minHeight: '24vh',
           position: 'absolute',
+          right: 0,
           top: 0,
           width: '100%',
         }}

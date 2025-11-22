@@ -3,7 +3,7 @@
 import React from 'react';
 import { Box, Typography, Grid } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faTiktok } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faTiktok, faXTwitter, faFacebook } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
   return (
@@ -105,6 +105,12 @@ const Footer = () => {
             </a>
             <a href="https://www.tiktok.com/@bugglights" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faTiktok} style={{ color: '#C6C3BA', fontSize: '1.5rem' }} />
+            </a>
+            <a href="https://x.com/BuggLights" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faXTwitter} style={{ color: '#C6C3BA', fontSize: '1.5rem' }} />
+            </a>
+            <a href="https://www.facebook.com/people/Bugg-Lights/61584253583434/" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faFacebook} style={{ color: '#C6C3BA', fontSize: '1.5rem' }} />
             </a>
           </Box>
         </Grid>

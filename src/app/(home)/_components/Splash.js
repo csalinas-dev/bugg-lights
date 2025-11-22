@@ -30,14 +30,15 @@ const Splash = () => {
         sx={{
           aspectRatio: 6 / 2,
           display: 'flex',
+          height: 'auto',
           left: '50%',
           maxWidth: '100vw',
           minHeight: '24vh',
           position: 'absolute',
-          width: '100%',
           right: 0,
           top: 0,
           transform: 'translateX(-50%)',
+          width: '100%',
         }}
       >
         <Image

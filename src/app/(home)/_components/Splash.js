@@ -31,6 +31,7 @@ const Splash = () => {
           aspectRatio: 6 / 2,
           display: 'flex',
           left: 0,
+          maxWidth: '100vw',
           minHeight: '24vh',
           position: 'absolute',
           top: 0,

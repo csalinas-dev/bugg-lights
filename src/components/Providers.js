@@ -1,6 +1,6 @@
 'use client';
 
-import { ThemeProvider } from '@mui/material/styles';
+import { responsiveFontSizes, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { createTheme } from '@mui/material/styles';
 
@@ -13,7 +13,7 @@ const body = {
   fontFamily: '"Nunito", "Helvetica", "Arial", sans-serif',
 }
 
-const theme = createTheme({
+let theme = createTheme({
   palette: {
     background: {
       default: '#090806',
@@ -57,12 +57,24 @@ const theme = createTheme({
     },
     body1: {
       ...body,
+      fontSize: { xs: '1rem', md: '1.5rem' },
     },
     body2: {
       ...body,
+      fontSize: { xs: '0.8rem', md: '1rem' },
+    },
+  },
+  components: {
+    MuiStack: {
+      defaultProps: {
+        useFlexGap: true, // Use gap instead of margin
+      },
     },
   },
 });
+
+theme = responsiveFontSizes(theme);
+
 
 export function Providers({ children }) {
   return (

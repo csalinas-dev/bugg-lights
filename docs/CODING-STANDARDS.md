@@ -1,115 +1,84 @@
 # Coding Standards
 
-This document defines how code in this repository should be written, organized, and maintained.  
-It serves as a living reference for both human developers and AI coding assistants.
+## Languages & Frameworks
+
+- **Languages**: JavaScript (ES6+).
+- **Frameworks**: Next.js for static site generation and routing, React for component-based UI.
+- **Libraries**: Material-UI (MUI) for UI components, Emotion for styling, FontAwesome for icons, ESLint for code linting.
 
 ---
 
-## Technologies
+## Structural Patterns
 
-List the primary stack used in this repository.
-
-Examples:
-- Languages: TypeScript, C#, Python, etc.
-- Frameworks: ASP.NET Core, Next.js, Django, etc.
-- Data Access: ORM, query builders, or raw SQL.
-- Testing Frameworks and Tools: Jest, xUnit, PyTest, etc.
-
-This section should accurately reflect what is used in the codebase.
+- **Components**: Functional React components, primarily stateless, handling presentation and user interaction.
+- No services, repositories, or domain layers; components are the primary structural unit.
+- CSS modules co-located with components for scoped styling.
+- Use Next.js app router for page-level structure.
 
 ---
 
-## General Principles
+## Naming Conventions
 
-- Prefer clarity over cleverness.
-- Keep functions, methods, and modules focused on a single purpose.
-- Follow established naming and structural patterns throughout the repo.
-- Favor composition over inheritance.
-- Reuse existing abstractions when possible.
-- Avoid magic numbers, duplicated logic, and implicit side effects.
+- **Files**: PascalCase for component files (e.g., `Splash.js`), camelCase for other files.
+- **Variables and Functions**: camelCase (e.g., `userName`, `handleClick`).
+- **Components**: PascalCase (e.g., `Splash`, `FoodDonationCallout`).
+- **CSS Modules**: kebab-case (e.g., `page.module.css`).
 
 ---
 
-## Project Structure
+## Formatting & Style
 
-Describe how this repository is organized and where new code should go.
-
-Examples:
-- Code lives in `src/`.
-- Features are grouped by domain under `src/features/`.
-- Shared utilities and infrastructure live under `src/lib/` or `src/common/`.
-- Tests mirror the folder structure of implementation files.
-
-Define clear locations for:
-- New endpoints, routes, or handlers.
-- New business logic or service layers.
-- New data access modules or repositories.
-- Shared types, utilities, and constants.
-
----
-
-## Style & Formatting
-
-- Follow the `.editorconfig`, linting, or formatting tools already configured.
-- Match existing naming conventions and indentation style.
-- Keep line lengths reasonable (e.g., ≤120 characters).
-- Maintain consistent import ordering and file organization.
-- Favor readability and simplicity over line-count reduction.
-
-If the repo has no enforced style rules, follow the dominant style of nearby code.
+- Code formatted with ESLint configuration (`eslint.config.mjs`).
+- Follows standard JavaScript/React conventions.
+- Import grouping: React imports first, third-party libraries, then local imports.
 
 ---
 
 ## Error Handling & Logging
 
-- Follow existing error-handling patterns within the repo.
-- Avoid swallowing exceptions silently; handle them intentionally.
-- Use centralized or consistent logging mechanisms.
-- Log meaningful context but never secrets, credentials, or personal data.
-- Avoid over-logging in tight loops or performance-critical sections.
+- Standard JavaScript error handling with try/catch where necessary.
+- No specialized logging framework; minimal logging as it's a static site.
+- Errors handled at component level or propagated as needed.
 
 ---
 
-## Security & Privacy
+## Configuration & Environment
 
-- Never commit secrets or credentials.
-- Sanitize and validate all user input.
-- Escape or encode all output in rendered templates or responses.
-- Use least-privilege access for any external systems.
-- Store sensitive information securely (environment variables, secret manager, etc.).
+- Configuration managed via `next.config.mjs` for build settings.
+- No environment variables or complex configuration; static build.
 
 ---
 
-## Commenting Guidelines
+## Testing
 
-Comments are valuable when they add context — not when they restate the obvious.
-
-**DO:**
-- Add comments above functions, classes, or major logical blocks explaining their purpose.
-- Explain *why* something is implemented a certain way when it’s not immediately obvious.
-- Note assumptions, dependencies, side effects, or historical context that might surprise future readers.
-
-**DO NOT:**
-- Comment every line or small step in a function.
-- Write comments that describe what the code already makes clear.
-- Add noise like:
-  ```js
-  // Print the letter 'a'
-  console.log('a');
-````
-
-**Rule of thumb:**
-If the code is self-explanatory, don’t narrate it.
-If the reasoning, context, or side effect isn’t obvious, document it clearly.
+- No testing framework or conventions established in the codebase.
 
 ---
 
-## Updating Standards
+## Deployment & CI/CD
 
-When a new pattern, dependency, or framework change is introduced:
+- Deployed as static build via Next.js export or hosting platforms (e.g., Vercel).
+- No CI/CD pipeline specified.
 
-1. Update this file to reflect the new standard.
-2. Include concise examples of correct usage.
-3. Mark any outdated or deprecated conventions as “Legacy”.
+---
 
-This document should always reflect the reality of the codebase — not an aspiration.
+## Commenting
+
+Do not comment trivial or self-explanatory code.
+Comments are for high-level explanations (functions, classes, or complex processes).
+Only add inline comments when clarifying why something is done, not what the code does.
+Include comments for background assumptions, side effects, or non-obvious design decisions.
+
+Example of what not to do:
+```js
+// Print the letter 'a'
+console.log('a');
+```
+
+---
+
+## Other Conventions
+
+- Use "use client" directive for client-side components in Next.js.
+- Inline styles with Material-UI sx prop.
+- Optimized images with Next.js Image component.

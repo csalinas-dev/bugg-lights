@@ -2,46 +2,40 @@
 
 ## Overview
 
-Briefly describe what this repository does and who or what it serves.
-
-Examples:
-- “Customer-facing portal for viewing and managing mortgage loans.”
-- “Internal admin API for managing contracts and investors.”
-- “Background worker that processes financial events from a message queue.”
+This repository hosts a static website providing information about an event or business venue, serving visitors interested in planning visits, sponsorship opportunities, and related details.
 
 Include:
-- Primary purpose.
-- Primary consumers (humans, services, scheduled jobs).
-- Any high-level domain terms that appear everywhere in the code.
+- Primary purpose: Display static content for event/venue information including rules, courtesies, food donation options, sponsorships, and photo galleries.
+- Primary consumers: Human visitors to the website.
+- High-level domain terms: Venue booking, sponsorship, food donations, event planning.
 
 ---
 
 ## Architecture
 
-Summarize the high-level architecture of this repo.
+This repository is a static web application built for deployment as a compiled site.
 
 Describe:
 
-- Main runtime types (web app, API, worker, CLI, etc.).
-- Primary layers or modules, such as:
-  - **Entrypoint layer** (routes, controllers, handlers, UI components).
-  - **Service / domain layer** (business logic, rules, workflows).
-  - **Data layer** (repositories, ORM/data models, external API clients).
-  - **Integration layer** (messaging, third-party APIs, shared libraries).
+- Main runtime types: Static web app served via hosting platforms (e.g., Vercel, Netlify).
+- Primary layers or modules:
+  - **Entrypoint layer**: Next.js app router in `src/app/` handles page routing and global layout.
+  - **UI layer**: Reusable React components in `src/components/` handle presentation and user interaction.
+  - No service/domain or data layers present; content is static.
 
-Show how data generally flows between these layers.
+Data flows from static files (JSX, CSS, images) through Next.js build process to generate HTML/CSS/JS bundles.
 
 ---
 
 ## Key Components
 
-List the most important modules/components and their responsibilities.
-
-Examples:
-- **LoanController** — handles user-facing endpoints for loan data.
-- **PaymentService** — encapsulates payment rules and calculations.
-- **ReportingRepository** — reads reporting data from the analytics store.
-- **NotificationService** — sends emails or other notifications.
+- **Splash** — Main landing component displaying introductory content.
+- **PlanYourVisit** — Provides information and guidance for planning visits to the venue.
+- **RulesCourtesies** — Displays venue rules and courtesies for visitors.
+- **FoodDonationCallout** — Promotes food donation opportunities.
+- **Sponsorship** — Details sponsorship options and benefits.
+- **MiniGallery** — Showcases venue photos or event highlights.
+- **Footer** — Site footer with general information.
 
 Keep this high-level and stable over time.
 
@@ -49,45 +43,28 @@ Keep this high-level and stable over time.
 
 ## External Dependencies & Integrations
 
-Describe non-trivial dependencies:
+No non-trivial external dependencies or integrations; this is a standalone static site.
 
-- Databases (name and role, not credentials).
-- Message queues / event buses.
-- External APIs / services.
-- Shared internal libraries.
-
-Clarify what the repo reads/writes, and where.
+- No databases.
+- No message queues or external APIs.
+- Static assets served from `public/` directory.
 
 ---
 
 ## Environments & Configuration
 
-Summarize:
-
-- Available environments (local, dev, staging, production, etc.).
-- How configuration is usually provided (environment variables, JSON/YAML, secret manager).
-- Any important environment-specific behavior or flags (feature toggles, modes).
+- Available environments: Local development (Next.js dev server), production (static build).
+- Configuration provided via `next.config.mjs` and package.json scripts.
+- No environment-specific behavior or feature toggles.
 
 ---
 
 ## Interactions with Other Repositories
 
-If this repo is part of a larger system:
-
-- List the other repos it interacts with.
-- Describe:
-  - Interaction type (HTTP, queue, shared DB, shared library).
-  - Direction (who calls whom).
-  - High-level data exchanged.
+This repository does not interact with other repositories; it is self-contained.
 
 ---
 
 ## Known Constraints / Legacy Areas
 
-Call out:
-
-- Modules or flows considered “legacy” or fragile.
-- Performance-sensitive paths or areas that must be optimized.
-- Known technical debt that future changes should keep in mind.
-
-This helps onboard new developers and keeps Roo honest about where it’s operating.
+No known legacy areas or constraints; codebase appears modern and straightforward with no technical debt noted.

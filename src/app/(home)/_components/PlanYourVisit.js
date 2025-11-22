@@ -1,13 +1,14 @@
 "use client";
 
 import React from 'react';
-import { Box, Typography, Grid, Card, CardContent } from '@mui/material';
+import { Box, Typography, Grid } from '@mui/material';
+import { Glass } from '@/components/Glass';
 
 const PlanYourVisit = () => {
   const cards = [
     {
       title: 'Display Hours',
-      text: 'The lights turn on nightly from 5:00 pm to 10:00 pm, beginning Thanksgiving and running through New Year’s Day.',
+      text: 'The display begins Friday, November 28th at 6pm. Following nights will be on from 5:00 pm to 10:00 pm, through New Year’s Day.',
       note: 'Walk the sidewalk, driveway, and patio; take photos; and enjoy the display at your own pace. Make sure to tag us @bugglights!',
     },
     {
@@ -18,7 +19,7 @@ const PlanYourVisit = () => {
     {
       title: 'Free Hot Chocolate',
       text: 'On Friday and Saturday evenings, volunteers serve free hot chocolate, made possible by generous community sponsors.',
-      note: 'Find the cocoa station by the penguin exhibit located in the patio (enter by the front door).',
+      note: 'Find the cocoa station by the penguin exhibit located in the patio.',
     },
   ];
 
@@ -57,55 +58,19 @@ const PlanYourVisit = () => {
       >
         {cards.map((card, index) => (
           <Grid size={{ xs: 1, md: 1 }} key={index}>
-            <Card
+            <Glass
               sx={{
-                backgroundColor: '#0F0E0C',
-                borderRadius: '8px',
-                borderTop: '6px solid #4CAF50',
-                padding: '32px',
+                padding: '2.5rem',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
                 minHeight: '300px',
               }}
             >
-              <CardContent
-                sx={{
-                  padding: 0,
-                }}
-              >
-                <Typography
-                  variant="h5"
-                  sx={{
-                    fontFamily: 'var(--font-bree-serif)',
-                    marginBottom: '1rem',
-                    color: '#ffffff',
-                  }}
-                >
-                  {card.title}
-                </Typography>
-                <Typography
-                  variant="body2"
-                  sx={{
-                    fontFamily: 'var(--font-nunito)',
-                    marginBottom: '1rem',
-                    color: '#C6C3BA',
-                  }}
-                >
-                  {card.text}
-                </Typography>
-                <Typography
-                  variant="body2"
-                  sx={{
-                    fontFamily: 'var(--font-nunito)',
-                    fontSize: '0.875rem',
-                    color: '#A09D95',
-                  }}
-                >
-                  {card.note}
-                </Typography>
-              </CardContent>
-            </Card>
+              <Typography variant="h5">{card.title}</Typography>
+              <Typography variant="body1">{card.text}</Typography>
+              <Typography variant="caption">{card.note}</Typography>
+            </Glass>
           </Grid>
         ))}
       </Grid>

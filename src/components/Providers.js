@@ -37,32 +37,14 @@ let theme = createTheme({
   },
   typography: {
     ...body,
-    h1: {
-      ...headings,
-    },
-    h2: {
-      ...headings,
-    },
-    h3: {
-      ...headings,
-    },
-    h4: {
-      ...headings,
-    },
-    h5: {
-      ...headings,
-    },
-    h6: {
-      ...headings,
-    },
-    body1: {
-      ...body,
-      fontSize: { xs: '1rem', md: '1.5rem' },
-    },
-    body2: {
-      ...body,
-      fontSize: { xs: '0.8rem', md: '1rem' },
-    },
+    h1: headings,
+    h2: headings,
+    h3: headings,
+    h4: headings,
+    h5: headings,
+    h6: headings,
+    body1: body,
+    body2: body,
   },
   components: {
     MuiStack: {

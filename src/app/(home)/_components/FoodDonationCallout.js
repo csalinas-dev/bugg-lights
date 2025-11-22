@@ -47,10 +47,10 @@ const FoodDonationCallout = () => {
             <Typography variant="h1" sx={{ textAlign: { xs: "center", md: "left" }, lineHeight: "1em" }} mb={1}>GIVE & GLOW</Typography>
             <Typography variant="h2" sx={{ textAlign: { xs: "center", md: "left" } }} mb={3} color="secondary">with The Bugg Lights</Typography>
             <Typography variant="body1" mb={1}>
-              Help brighten the season for local families by bringing canned goods or pantry staples to support Storehouse-Albuquerque.
+              The Bugg Lights have always been about community — families gathering, kids laughing, and neighbors sharing a little light with one another. Many visitors choose to bring canned goods or pantry staples, knowing they&apos;ll go straight to Storehouse Albuquerque and support local families who could use an extra hand this season.
             </Typography>
             <Typography variant="body1">
-              We collect non-perishable food throughout the season and eliver it to Storehouse-Albuquerque. When you come to enjoy the lights, bring a few items to drop int eh donation bin and help fill both plates and hearts.
+              If you feel inspired to give, simply drop your items into the donation bin as you enjoy the display. Every contribution, no matter the size, becomes part of the tradition and helps spread the warmth far beyond our yard.
             </Typography>
           </Glass>
         </Grid>

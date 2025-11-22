@@ -1,5 +1,5 @@
 import { Bree_Serif, Nunito } from "next/font/google";
-import "./globals.css";
+import "./global.scss";
 import { Providers } from "../components/Providers";
 
 const breeSerif = Bree_Serif({

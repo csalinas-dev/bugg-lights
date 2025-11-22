@@ -30,13 +30,13 @@ const Splash = () => {
         sx={{
           aspectRatio: 6 / 2,
           display: 'flex',
-          left: 0,
+          left: '50%',
           maxWidth: '100vw',
           minHeight: '24vh',
           position: 'absolute',
           right: 0,
           top: 0,
-          width: '100%',
+          transform: 'translateX(-50%)',
         }}
       >
         <Image
@@ -44,11 +44,11 @@ const Splash = () => {
           height={500}
           src="/logo-glowing.png"
           style={{
-            objectFit: 'contain',
-            height: '100%',
             aspectRatio: 1 / 1,
-            width: 'auto',
+            height: '100%',
             maxWidth: '500px',
+            objectFit: 'contain',
+            width: 'auto',
           }}
           width={500}
         />

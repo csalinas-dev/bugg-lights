@@ -4,11 +4,20 @@ import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { createTheme } from '@mui/material/styles';
 
+const headings = {
+  fontFamily: '"Bree Serif", serif',
+  marginBottom: '0.25em',
+}
+
+const body = {
+  fontFamily: '"Nunito", "Helvetica", "Arial", sans-serif',
+}
+
 const theme = createTheme({
   palette: {
     background: {
       default: '#090806',
-      paper: '#090806',
+      paper: '#1f283d',
     },
     text: {
       primary: '#FFFCF3',
@@ -27,21 +36,30 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: '"Nunito", "Helvetica", "Arial", sans-serif',
+    ...body,
     h1: {
-      fontFamily: '"Bree Serif", serif',
+      ...headings,
     },
     h2: {
-      fontFamily: '"Bree Serif", serif',
+      ...headings,
     },
     h3: {
-      fontFamily: '"Bree Serif", serif',
+      ...headings,
+    },
+    h4: {
+      ...headings,
+    },
+    h5: {
+      ...headings,
+    },
+    h6: {
+      ...headings,
     },
     body1: {
-      fontFamily: '"Nunito", "Helvetica", "Arial", sans-serif',
+      ...body,
     },
     body2: {
-      fontFamily: '"Nunito", "Helvetica", "Arial", sans-serif',
+      ...body,
     },
   },
 });

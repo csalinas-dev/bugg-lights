@@ -1,6 +1,8 @@
 import { Bree_Serif, Nunito } from "next/font/google";
-import "./global.scss";
-import { Providers } from "../components/Providers";
+import "./global.css";
+
+import { Providers } from "@/components/Providers";
+import Footer from "@/components/Footer";
 
 const breeSerif = Bree_Serif({
   variable: "--font-bree-serif",
@@ -27,6 +29,7 @@ export default function RootLayout({ children }) {
       <body className={`${breeSerif.variable} ${nunito.variable}`}>
         <Providers>
           {children}
+          <Footer />
         </Providers>
       </body>
     </html>

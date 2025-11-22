@@ -34,6 +34,7 @@ const Splash = () => {
           maxWidth: '100vw',
           minHeight: '24vh',
           position: 'absolute',
+          width: '100%',
           right: 0,
           top: 0,
           transform: 'translateX(-50%)',

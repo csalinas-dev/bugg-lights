@@ -1,8 +1,17 @@
 "use client";
 
-import React from 'react';
-import { Box, Stack } from '@mui/material';
+import Link from 'next/link';
 import Image from 'next/image';
+import React from 'react';
+import { Box, Button, Container, Stack, styled } from '@mui/material';
+
+const NavLink = styled(Link)`
+  color: white;
+
+  &:hover {
+    color: #FFD700;
+  }
+`;
 
 const Splash = () => {
   return (
@@ -26,6 +35,30 @@ const Splash = () => {
         }}
         width={6000}
       />
+      <Box
+        sx={{
+          background: { xs: "linear-gradient(to bottom, #00000000 0%, #090806 100%)", lg: "transparent" },
+          bottom: { xs: 0, lg: "initial" },
+          left: 0,
+          padding: "2rem",
+          position: 'absolute',
+          right: 0,
+          top: { xs: "initial", lg: 0 },
+          zIndex: 2,
+        }}>
+        <Container maxWidth="xl" component={Stack} direction="row" spacing={2} flexWrap="wrap" alignItems="center" justifyContent="center">
+          <Stack direction="row" flexWrap="wrap" justifyContent={{ xs: "center", sm: "flex-start" }} spacing={{ xs: 2, sm: 4 }} sx={{ flex: { xs: 'initial', sm: '1 1 0px' } }} >
+            <NavLink href="/plan">Plan Your Visit</NavLink>
+            <NavLink href="/sponsor">Sponsorship</NavLink>
+            <NavLink href="/in-the-news">In the News</NavLink>
+          </Stack>
+          <Box>
+            <Button component={Link} href="/food-drive" variant="contained" sx={{ display: 'flex', alignItems: "center", justifyContent: "center", padding: "0.625rem 1rem" }}>
+              <Box component="span" sx={{ lineHeight: '1em' }}>Help Feed Local Families</Box>
+            </Button>
+          </Box>
+        </Container>
+      </Box>
       <Stack direction="row" alignItems="center" justifyContent="center"
         sx={{
           aspectRatio: 6 / 2,
@@ -39,6 +72,7 @@ const Splash = () => {
           top: 0,
           transform: 'translateX(-50%)',
           width: '100%',
+          zIndex: 1,
         }}
       >
         <Image
@@ -55,6 +89,7 @@ const Splash = () => {
           width={500}
         />
       </Stack>
+
     </Box>
   );
 };

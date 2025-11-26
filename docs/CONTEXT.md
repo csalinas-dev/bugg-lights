@@ -36,6 +36,7 @@ Data flows from static files (JSX, CSS, images) through Next.js build process to
 - **Sponsorship** — Details sponsorship options and benefits.
 - **MiniGallery** — Showcases venue photos or event highlights.
 - **Footer** — Site footer with general information.
+- **Navigation** — Site navigation bar displayed on non-homepage pages.
 
 Keep this high-level and stable over time.
 

@@ -1,8 +1,6 @@
-import { GoogleAnalytics } from '@next/third-parties/google';
 import { Bree_Serif, Nunito } from "next/font/google";
-
-import { Providers } from "@/components/Providers";
-import Footer from "@/components/Footer";
+import { GoogleAnalytics } from '@next/third-parties/google';
+import { Footer, Providers } from "@/components";
 
 import "./global.css";
 

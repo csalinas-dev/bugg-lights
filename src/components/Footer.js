@@ -6,7 +6,7 @@ import { faInstagram, faTiktok, faXTwitter, faFacebookF } from '@fortawesome/fre
 import { SocialOrnament } from './SocialOrnament';
 import Image from 'next/image';
 
-const Footer = styled('footer')`
+const Wrapper = styled('footer')`
   background-color: #0A0F1C;
   padding-bottom: 48px;
   padding-top: 98px;
@@ -24,8 +24,8 @@ const Footer = styled('footer')`
   }
 `;
 
-const Component = () => (
-  <Footer>
+export const Footer = () => (
+  <Wrapper>
     <Container>
       <Grid
         container
@@ -57,7 +57,5 @@ const Component = () => (
         </Grid>
       </Grid>
     </Container>
-  </Footer>
+  </Wrapper>
 );
-
-export default Component;

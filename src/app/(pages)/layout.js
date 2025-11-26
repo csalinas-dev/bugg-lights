@@ -1,12 +1,14 @@
-import Navigation from "@/components/Navigation";
+"use client";
+
+import { Main, Navigation } from "@/components";
 
 export default function PageLayout({ children }) {
   return (
     <>
       <Navigation />
-      <main>
+      <Main>
         {children}
-      </main>
+      </Main>
     </>
   )
 }

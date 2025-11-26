@@ -24,7 +24,7 @@ const Wrapper = styled(Box)`
 
 const FoodDonationCallout = () => {
   return (
-    <Wrapper>
+    <Wrapper id="food-drive">
       <Grid container spacing={2}
         sx={{
           width: '100%',

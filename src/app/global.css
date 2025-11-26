@@ -6,9 +6,13 @@
 
 html,
 body {
+  background-color: #0A0F1C;
   max-width: 100%;
   overflow-x: hidden;
-  background-color: #0A0F1C;
+}
+
+body {
+  scroll-behavior: smooth !important;
 }
 
 a {

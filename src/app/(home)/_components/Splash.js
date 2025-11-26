@@ -53,7 +53,7 @@ const Splash = () => {
             <NavLink href="/in-the-news">In the News</NavLink>
           </Stack>
           <Box>
-            <Button component={Link} href="/food-drive" variant="contained" sx={{ display: 'flex', alignItems: "center", justifyContent: "center", padding: "0.625rem 1rem" }}>
+            <Button component={Link} href="#food-drive" variant="contained" sx={{ display: 'flex', alignItems: "center", justifyContent: "center", padding: "0.625rem 1rem" }}>
               <Box component="span" sx={{ lineHeight: '1em' }}>Help Feed Local Families</Box>
             </Button>
           </Box>

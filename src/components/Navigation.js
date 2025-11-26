@@ -8,7 +8,6 @@ import { Box, styled, Container, Button, Stack } from "@mui/material";
 const StyledNav = styled(Box)`
   background-color: #090806;
   color: white;
-  padding: 1rem 0;
   position: relative;
   position: sticky;
   top: 0;
@@ -16,9 +15,10 @@ const StyledNav = styled(Box)`
 
   &::after {
     background: url(/light-strand.png) repeat-x;
+    background-size: 229px 35px;
     bottom: 0;
     content: '';
-    height: 50px;
+    height: 35px;
     left: 0;
     position: absolute;
     right: 0;
@@ -39,20 +39,21 @@ export const Navigation = () => {
   if (pathname === "/") return null;
 
   return (
-    <StyledNav>
+    <StyledNav sx={{ padding: { xs: "1rem 0 2rem", md: "1rem 2rem 1rem 0" } }}>
       <Container maxWidth="xl">
-        <Stack direction="row" flexWrap="wrap" alignItems="center" spacing={4}>
-          <Link href="/">
+        <Stack direction={{ xs: "column", md: "row" }} alignItems="center" spacing={{ xs: 2, md: 4 }}>
+          <Link href="/" style={{}}>
             <Image src="/logo.png" width={150} height={150} alt="The Bugg Lights Logo" />
           </Link>
-          <Stack direction="row" spacing={2} sx={{ flex: '1 1 0px' }} >
-            <NavLink href="/media">Media</NavLink>
+          <Stack direction="row" flexWrap="wrap" justifyContent={{ xs: "center", md: "flex-start" }} spacing={{xs: 2, md: 4}} sx={{ flex: { xs: 'initial', md: '1 1 0px' } }} >
             <NavLink href="/plan">Plan Your Visit</NavLink>
             <NavLink href="/sponsor">Sponsorship</NavLink>
-            <NavLink href="/rules">Rules & Courtesies</NavLink>
+            <NavLink href="/in-the-news">In the News</NavLink>
           </Stack>
           <Box>
-            <Link href="/food" component={Button} variant="contained">Donate</Link>
+            <Button component={Link} href="/food-drive" variant="contained" sx={{ display: 'flex', alignItems: "center", justifyContent: "center", padding: "0.625rem 1rem" }}>
+              <Box component="span" sx={{ lineHeight: '1em' }}>Help Feed Local Families</Box>
+            </Button>
           </Box>
         </Stack>
       </Container>

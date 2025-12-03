@@ -15,6 +15,7 @@ const body = {
 
 let theme = createTheme({
   palette: {
+    mode: 'dark',
     background: {
       default: '#090806',
       paper: '#1f283d',

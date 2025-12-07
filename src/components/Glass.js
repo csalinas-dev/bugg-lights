@@ -9,6 +9,6 @@ const Wrapper = styled(Box)`
     border: 3px solid #435991;
 `;
 
-export const Glass = ({ children, ...props }) => (
-    <Wrapper sx={{ p: { xs: '1.5rem', md: "3rem" } }} {...props}>{children}</Wrapper>
+export const Glass = ({ children, sx, ...props }) => (
+    <Wrapper sx={{ p: { xs: '1.5rem', md: "3rem" }, ...sx }} {...props}>{children}</Wrapper>
 );

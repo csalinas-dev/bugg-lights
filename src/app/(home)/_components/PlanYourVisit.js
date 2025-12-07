@@ -6,7 +6,41 @@ import Image from 'next/image';
 import { Glass } from '@/components/Glass';
 
 const PlanYourVisit = () => {
-  const images = [
+
+  const guidelines = [
+    {
+      image: '/toons/penguin-no-parking.png',
+      title: 'Parking',
+      desc: 'Park along nearby residential streets. Please don\'t block driveways. Avoid parking in front of The Bugg House (marked with traffic cones) and do not park in front of our neighbor\'s home that is also decorated (7727 Don Dr NE).',
+    },
+    {
+      image: '/toons/penguins-shushing.png',
+      title: 'Be a Good Neighbor',
+      desc: 'Keep volume reasonable and help us maintain a peaceful environment for the families who live here.',
+    },
+    {
+      image: '/toons/penguin-sidewalk-only.png',
+      title: 'Sidewalks Only',
+      desc: 'Stick to sidewalks and walking paths so everyone can explore the display safely.',
+    },
+    {
+      image: '/toons/penguin-watching-kids.png',
+      title: 'Watch the Little Ones',
+      desc: 'Keep children close and avoid touching the displays. Some pieces are old, delicate, and a little pokey. Staying hands off keeps everyone safe.',
+    },
+    {
+      image: '/toons/santa-no-money.png',
+      title: 'No Money Accepted',
+      desc: 'We don\'t accept tips or monetary donations at the house.',
+    },
+    {
+      image: '/toons/penguin-food-donation.png',
+      title: 'Optional Food Drive Items',
+      desc: 'If you\'d like to give, we encourage non-perishable food donations to support local families this season.',
+    },
+  ];
+
+  const posters = [
     {
       src: '/posts/santa-schedule.jpg',
       alt: "Santa will be at The Bugg Lights every Friday and Saturday, December 23rd, and Christmas Eve.",
@@ -30,98 +64,57 @@ const PlanYourVisit = () => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
+        gap: 4
       }}
     >
-      <Typography
-        variant="h2"
-        sx={{
-          fontFamily: 'var(--font-bree-serif)',
-          fontSize: '2.5rem',
-          marginBottom: '3rem',
-          textAlign: 'center',
-        }}
-      >
-        Plan Your Visit
-      </Typography>
-      <Glass mb={4}>
-        <Typography variant="h5" gutterBottom>Display Hours & Guidelines</Typography>
-        <Typography
-          variant="body1"
-          sx={{
-            textAlign: 'center',
-            lineHeight: 1.4,
-          }}
-        >
-          The Bugg Lights shine every night from Thanksgiving to New Year’s. Opening night begins at 6pm, and all following nights run from 5pm to 10pm. Take your time as you walk through, enjoy the lights, snap photos, and soak in the holiday atmosphere while being mindful of the neighborhood.
+
+      <Glass sx={{ p: { xs: '1.5rem', md: "3rem", xl: "3rem 6rem" }, textAlign: "center" }}>
+        <Typography variant="h3" gutterBottom>
+          Plan Your Visit
         </Typography>
-        <Grid container spacing={2} sx={{ mt: 3 }}>
-          {[
-            {
-              icon: '🐧🚗',
-              title: 'Parking & Cones',
-              desc: 'Park along nearby residential streets. Please don\'t block driveways. Avoid parking in front of The Bugg House (marked with traffic cones) and do not park in front of our neighbor\'s home directly west of us at 7727 Don Dr NE (south side of the street).',
-            },
-            {
-              icon: '🤫',
-              title: 'Be a Good Neighbor',
-              desc: 'Keep volume reasonable and help us maintain a peaceful environment for the families who live here.',
-            },
-            {
-              icon: '🚶',
-              title: 'Sidewalks Only',
-              desc: 'Stick to sidewalks and walking paths so everyone can explore the display safely.',
-            },
-            {
-              icon: '👨‍👩‍👧‍👦',
-              title: 'Watch the Little Ones',
-              desc: 'Keep children close near lights and moving displays so they stay safe while exploring.',
-            },
-            {
-              icon: '🚫💰',
-              title: 'No Money Accepted',
-              desc: 'We don\'t accept tips or monetary donations at the house.',
-            },
-            {
-              icon: '🥫',
-              title: 'Optional Food Drive Items',
-              desc: 'If you\'d like to give, we encourage non-perishable food donations to support local families this season.',
-            },
-          ].map((item, index) => (
-            <Grid item xs={12} md={4} key={index}>
-              <Box
-                sx={{
-                  backdropFilter: 'blur(5px)',
-                  backgroundColor: '#1a264480',
-                  borderRadius: '1.5rem',
-                  border: '2px solid #435991',
-                  boxShadow: '0 0 8px rgba(67, 89, 145, 0.3)',
-                  p: 2,
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'flex-start',
+        <Typography variant="body1" gutterBottom>
+          The Bugg Lights shine every night from Thanksgiving to New Year&apos;s. Opening night begins at 6pm, and all following nights run from 5pm to 10pm. Take your time as you walk through, enjoy the lights, snap photos, and soak in the holiday atmosphere while being mindful of the neighborhood.
+        </Typography>
+        <Typography variant="body1">Please tag us on social media @bugglights</Typography>
+      </Glass>
+      <Grid container spacing={2}>
+        {guidelines.map((item, index) => (
+          <Grid item size={{ xs: 12, md: 4 }} key={index}>
+            <Glass
+              sx={{
+                alignItems: 'center',
+                display: 'flex',
+                flexDirection: { xs: "column", md: "row" },
+                gap: 2,
+                height: '100%',
+                p: { xs: "1.25rem 1.5rem", md: "1.5rem 1.25rem" },
+              }}
+            >
+              <Image
+                src={item.image}
+                alt={item.title + " at The Bugg Lights"}
+                width={200}
+                height={200}
+                style={{
+                  aspectRatio: 1 / 1,
+                  filter: "drop-shadow(1px 2px 6px #df8c3840)",
+                  objectFit: 'contain',
                 }}
-              >
-                <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
-                  <Typography variant="body1" sx={{ mr: 1, fontSize: '1.5rem' }}>
-                    {item.icon}
-                  </Typography>
-                  <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
-                    {item.title}
-                  </Typography>
-                </Box>
+              />
+              <Box sx={{ textAlign: { xs: "center", md: "left" } }}>
+                <Typography variant="h6" sx={{ fontWeight: 'bold' }} gutterBottom>
+                  {item.title}
+                </Typography>
                 <Typography variant="body2">
                   {item.desc}
                 </Typography>
               </Box>
-            </Grid>
-          ))}
-        </Grid>
-      </Glass>
-      <Grid
-        container
-        spacing={4}
-      >
-        {images.map((image, index) => (
+            </Glass>
+          </Grid>
+        ))}
+      </Grid>
+      <Grid container spacing={4}>
+        {posters.map((image, index) => (
           <Grid size={{ xs: 1, md: 4 }} key={index}>
             <Image
               src={image.src}

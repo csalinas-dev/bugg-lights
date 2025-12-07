@@ -2,25 +2,63 @@
 
 import React from 'react';
 import { Box, Typography, Grid } from '@mui/material';
+import Image from 'next/image';
 import { Glass } from '@/components/Glass';
 
 const PlanYourVisit = () => {
-  const cards = [
+
+  const guidelines = [
     {
-      title: 'Display Hours',
-      text: 'The display begins Friday, November 28th at 6pm. Following nights will be on from 5:00 pm to 10:00 pm, through New Year’s Day.',
-      note: 'Walk the sidewalk, driveway, and patio; take photos; and enjoy the display at your own pace. Make sure to tag us @bugglights!',
+      alt: 'Cartoon penguin in an orange safety vest holding a No Parking sign and traffic cone at The Bugg Lights display.',
+      image: '/toons/penguin-no-parking.png',
+      title: 'Parking',
+      desc: 'Park along nearby residential streets. Please don\'t block driveways. Avoid parking in front of The Bugg House (marked with traffic cones) and do not park in front of our neighbor\'s home that is also decorated (7727 Don Dr NE).',
     },
     {
-      title: 'Meet Santa',
-      text: 'Most Friday and Saturday nights, Santa Claus will be available for the children to greet. Parents are welcome to take their own photos.',
-      note: 'Santa’s schedule may change due to weather.',
+      alt: 'Cartoon adult penguin quietly shushing a small penguin to remind visitors to keep noise down at The Bugg Lights.',
+      image: '/toons/penguins-shushing.png',
+      title: 'Be a Good Neighbor',
+      desc: 'Keep volume reasonable and help us maintain a peaceful environment for the families who live here.',
     },
     {
-      title: 'Free Hot Chocolate',
-      text: 'On Friday and Saturday evenings, volunteers serve free hot chocolate, made possible by generous community sponsors.',
-      note: 'Find the cocoa station by the penguin exhibit located in the patio.',
+      alt: 'Cartoon penguin directing guests with a \'Sidewalk Only\' sign at The Bugg Lights Christmas display.',
+      image: '/toons/penguin-sidewalk-only.png',
+      title: 'Sidewalks Only',
+      desc: 'Stick to sidewalks and walking paths so everyone can explore the display safely.',
     },
+    {
+      alt: 'Cartoon parent penguin keeping tiny penguins close as a safety reminder for families visiting The Bugg Lights.',
+      image: '/toons/penguin-watching-kids.png',
+      title: 'Watch the Little Ones',
+      desc: 'Keep children close and avoid touching the displays. Some pieces are old, delicate, and a little pokey. Staying hands off keeps everyone safe.',
+    },
+    {
+      alt: 'Cartoon Santa at The Bugg Lights encouraging visitors to donate canned food instead of money.',
+      image: '/toons/santa-no-money.png',
+      title: 'No Money Accepted',
+      desc: 'We don\'t accept tips or monetary donations at the house.',
+    },
+    {
+      alt: 'Cartoon penguin placing a canned good into a Storehouse donation box at The Bugg Lights food drive.',
+      image: '/toons/penguin-food-donation.png',
+      title: 'Optional Food Drive Items',
+      desc: 'If you\'d like to give, we encourage non-perishable food donations to support local families this season.',
+    },
+  ];
+
+  const posters = [
+    {
+      src: '/posts/santa-schedule.jpg',
+      alt: "Santa will be at The Bugg Lights every Friday and Saturday, December 23rd, and Christmas Eve.",
+    },
+    {
+      src: '/posts/hot-chocolate.png',
+      alt: "Enjoy free hot chocolate every Friday and Saturday at The Bugg Lights.",
+    },
+    {
+      src: '/posts/christmas-carol-concert.jpg',
+      alt: "There will be a Christmas Carol Concert on December 19th and 20th at The Bugg Lights.",
+    }
   ];
 
   return (
@@ -32,45 +70,64 @@ const PlanYourVisit = () => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
+        gap: 4
       }}
     >
-      <Typography
-        variant="h2"
-        sx={{
-          fontFamily: 'var(--font-bree-serif)',
-          fontSize: '2.5rem',
-          marginBottom: '3rem',
-          textAlign: 'center',
-        }}
-      >
-        Plan Your Visit
-      </Typography>
-      <Grid
-        container
-        spacing={4}
-        sx={{
-          maxWidth: '1200px',
-          width: '100%',
-          justifyContent: 'center',
-          flexDirection: { xs: 'column', md: 'row' },
-        }}
-        columns={{ xs: 1, md: 3 }}
-      >
-        {cards.map((card, index) => (
-          <Grid size={{ xs: 1, md: 1 }} key={index}>
+      <Glass sx={{ p: { xs: '1.5rem', md: "3rem", xl: "3rem 6rem" }, textAlign: "center" }}>
+        <Typography variant="h3" gutterBottom>
+          Plan Your Visit
+        </Typography>
+        <Typography variant="body1" gutterBottom>
+          The Bugg Lights shine every night from Thanksgiving to New Year&apos;s. Opening night begins at 6pm, and all following nights run from 5pm to 10pm. Take your time as you walk through, enjoy the lights, snap photos, and soak in the holiday atmosphere while being mindful of the neighborhood.
+        </Typography>
+        <Typography variant="body1">Please tag us on social media @bugglights</Typography>
+      </Glass>
+      <Grid container spacing={2}>
+        {guidelines.map((item, index) => (
+          <Grid item size={{ xs: 12, md: 4 }} key={index}>
             <Glass
               sx={{
-                padding: '2.5rem',
+                alignItems: 'center',
                 display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'space-between',
-                minHeight: '300px',
+                flexDirection: { xs: "column", md: "row" },
+                gap: 2,
+                height: '100%',
+                p: { xs: "1.25rem 1.5rem", md: "1.5rem 1.25rem" },
               }}
             >
-              <Typography variant="h5">{card.title}</Typography>
-              <Typography variant="body1">{card.text}</Typography>
-              <Typography variant="caption">{card.note}</Typography>
+              <Image
+                src={item.image}
+                alt={item.alt}
+                width={200}
+                height={200}
+                style={{
+                  aspectRatio: 1 / 1,
+                  filter: "drop-shadow(1px 2px 6px #df8c3840)",
+                  objectFit: 'contain',
+                }}
+              />
+              <Box sx={{ textAlign: { xs: "center", md: "left" } }}>
+                <Typography variant="h6" sx={{ fontWeight: 'bold' }} gutterBottom>
+                  {item.title}
+                </Typography>
+                <Typography variant="body2">
+                  {item.desc}
+                </Typography>
+              </Box>
             </Glass>
+          </Grid>
+        ))}
+      </Grid>
+      <Grid container spacing={4}>
+        {posters.map((image, index) => (
+          <Grid size={{ xs: 1, md: 4 }} key={index}>
+            <Image
+              src={image.src}
+              alt={image.alt}
+              width={800}
+              height={1000}
+              style={{ width: '100%', height: 'auto' }}
+            />
           </Grid>
         ))}
       </Grid>

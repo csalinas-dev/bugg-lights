@@ -9,31 +9,37 @@ const PlanYourVisit = () => {
 
   const guidelines = [
     {
+      alt: 'Cartoon penguin in an orange safety vest holding a No Parking sign and traffic cone at The Bugg Lights display.',
       image: '/toons/penguin-no-parking.png',
       title: 'Parking',
       desc: 'Park along nearby residential streets. Please don\'t block driveways. Avoid parking in front of The Bugg House (marked with traffic cones) and do not park in front of our neighbor\'s home that is also decorated (7727 Don Dr NE).',
     },
     {
+      alt: 'Cartoon adult penguin quietly shushing a small penguin to remind visitors to keep noise down at The Bugg Lights.',
       image: '/toons/penguins-shushing.png',
       title: 'Be a Good Neighbor',
       desc: 'Keep volume reasonable and help us maintain a peaceful environment for the families who live here.',
     },
     {
+      alt: 'Cartoon penguin directing guests with a \'Sidewalk Only\' sign at The Bugg Lights Christmas display.',
       image: '/toons/penguin-sidewalk-only.png',
       title: 'Sidewalks Only',
       desc: 'Stick to sidewalks and walking paths so everyone can explore the display safely.',
     },
     {
+      alt: 'Cartoon parent penguin keeping tiny penguins close as a safety reminder for families visiting The Bugg Lights.',
       image: '/toons/penguin-watching-kids.png',
       title: 'Watch the Little Ones',
       desc: 'Keep children close and avoid touching the displays. Some pieces are old, delicate, and a little pokey. Staying hands off keeps everyone safe.',
     },
     {
+      alt: 'Cartoon Santa at The Bugg Lights encouraging visitors to donate canned food instead of money.',
       image: '/toons/santa-no-money.png',
       title: 'No Money Accepted',
       desc: 'We don\'t accept tips or monetary donations at the house.',
     },
     {
+      alt: 'Cartoon penguin placing a canned good into a Storehouse donation box at The Bugg Lights food drive.',
       image: '/toons/penguin-food-donation.png',
       title: 'Optional Food Drive Items',
       desc: 'If you\'d like to give, we encourage non-perishable food donations to support local families this season.',
@@ -91,7 +97,7 @@ const PlanYourVisit = () => {
             >
               <Image
                 src={item.image}
-                alt={item.title + " at The Bugg Lights"}
+                alt={item.alt}
                 width={200}
                 height={200}
                 style={{

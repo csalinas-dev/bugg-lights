@@ -44,9 +44,9 @@ const FoodDonationCallout = () => {
         </Grid>
         <Grid size={{ xs: 12, md: 8, lg: 6 }}>
           <Glass>
-            <Typography variant="h1" sx={{ textAlign: { xs: "center", md: "left" }, lineHeight: "1em" }} mb={1}>GIVE & GLOW</Typography>
-            <Typography variant="h2" sx={{ textAlign: { xs: "center", md: "left" } }} mb={3} color="secondary">with The Bugg Lights</Typography>
-            <Typography variant="body1" mb={1}>
+            <Typography variant="h1" sx={{ textAlign: { xs: "center", md: "left" }, lineHeight: "1em", fontSize: { xs: "3rem", md: "4rem" } }} mb={1}>GIVE & GLOW</Typography>
+            <Typography variant="h2" sx={{ textAlign: { xs: "center", md: "left" }, lineHeight: "1em", fontSize: { xs: "1.5rem", md: "2.5rem" } }} mb={3} color="secondary">with The Bugg Lights</Typography>
+            <Typography variant="body1" mb={3}>
               The Bugg Lights have always been about community — families gathering, kids laughing, and neighbors sharing a little light with one another. Many visitors choose to bring canned goods or pantry staples, knowing they&apos;ll go straight to Storehouse Albuquerque and support local families who could use an extra hand this season.
             </Typography>
             <Typography variant="body1">

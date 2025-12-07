@@ -100,3 +100,7 @@ Whenever you change the code in a way that affects how the system behaves or is 
 3. Always:
    - Keep changes logically cohesive.
    - Ensure tests and build scripts are conceptually kept in a working state according to this repo’s standards.
+
+---
+
+Other than the rules and guidlines written here, continue working on the request as you would originally.

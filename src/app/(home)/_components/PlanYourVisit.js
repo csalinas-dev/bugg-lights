@@ -45,12 +45,77 @@ const PlanYourVisit = () => {
       </Typography>
       <Glass mb={4}>
         <Typography variant="h5" gutterBottom>Display Hours & Guidelines</Typography>
-        <Typography variant="body1" gutterBottom>
-          The display begins Friday, November 28th at 6pm. Following nights will be on from 5:00 pm to 10:00 pm, through New Year’s Day. Please respect our neighbors and avoid blocking driveways. Park legally and safely along nearby streets. Keep volume reasonable during your visit. Stay on designated sidewalks and walking paths. Supervise children near displays and lighting equipment.
+        <Typography
+          variant="body1"
+          sx={{
+            textAlign: 'center',
+            lineHeight: 1.4,
+          }}
+        >
+          The Bugg Lights shine every night from Thanksgiving to New Year’s. Opening night begins at 6pm, and all following nights run from 5pm to 10pm. Take your time as you walk through, enjoy the lights, snap photos, and soak in the holiday atmosphere while being mindful of the neighborhood.
         </Typography>
-        <Typography variant="caption">
-          Walk the sidewalk, driveway, and patio; take photos; and enjoy the display at your own pace. Make sure to tag us @bugglights! We do not accept monetary donations or tips. We encourage all visitors to bring food for the food drive donations.
-        </Typography>
+        <Grid container spacing={2} sx={{ mt: 3 }}>
+          {[
+            {
+              icon: '🐧🚗',
+              title: 'Parking & Cones',
+              desc: 'Park along nearby residential streets. Please don\'t block driveways. Avoid parking in front of The Bugg House (marked with traffic cones) and do not park in front of our neighbor\'s home directly west of us at 7727 Don Dr NE (south side of the street).',
+            },
+            {
+              icon: '🤫',
+              title: 'Be a Good Neighbor',
+              desc: 'Keep volume reasonable and help us maintain a peaceful environment for the families who live here.',
+            },
+            {
+              icon: '🚶',
+              title: 'Sidewalks Only',
+              desc: 'Stick to sidewalks and walking paths so everyone can explore the display safely.',
+            },
+            {
+              icon: '👨‍👩‍👧‍👦',
+              title: 'Watch the Little Ones',
+              desc: 'Keep children close near lights and moving displays so they stay safe while exploring.',
+            },
+            {
+              icon: '🚫💰',
+              title: 'No Money Accepted',
+              desc: 'We don\'t accept tips or monetary donations at the house.',
+            },
+            {
+              icon: '🥫',
+              title: 'Optional Food Drive Items',
+              desc: 'If you\'d like to give, we encourage non-perishable food donations to support local families this season.',
+            },
+          ].map((item, index) => (
+            <Grid item xs={12} md={4} key={index}>
+              <Box
+                sx={{
+                  backdropFilter: 'blur(5px)',
+                  backgroundColor: '#1a264480',
+                  borderRadius: '1.5rem',
+                  border: '2px solid #435991',
+                  boxShadow: '0 0 8px rgba(67, 89, 145, 0.3)',
+                  p: 2,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'flex-start',
+                }}
+              >
+                <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
+                  <Typography variant="body1" sx={{ mr: 1, fontSize: '1.5rem' }}>
+                    {item.icon}
+                  </Typography>
+                  <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
+                    {item.title}
+                  </Typography>
+                </Box>
+                <Typography variant="body2">
+                  {item.desc}
+                </Typography>
+              </Box>
+            </Grid>
+          ))}
+        </Grid>
       </Glass>
       <Grid
         container

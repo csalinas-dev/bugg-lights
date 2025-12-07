@@ -67,7 +67,6 @@ const PlanYourVisit = () => {
         gap: 4
       }}
     >
-
       <Glass sx={{ p: { xs: '1.5rem', md: "3rem", xl: "3rem 6rem" }, textAlign: "center" }}>
         <Typography variant="h3" gutterBottom>
           Plan Your Visit
@@ -126,7 +125,7 @@ const PlanYourVisit = () => {
           </Grid>
         ))}
       </Grid>
-    </Box >
+    </Box>
   );
 };
 

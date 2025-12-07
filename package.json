@@ -14,14 +14,14 @@
     "@fortawesome/free-brands-svg-icons": "^7.1.0",
     "@fortawesome/react-fontawesome": "^3.1.0",
     "@mui/material": "^7.3.5",
-    "@next/third-parties": "^16.0.3",
-    "next": "16.0.3",
-    "react": "19.2.0",
-    "react-dom": "19.2.0"
+    "@next/third-parties": "^16.0.7",
+    "next": "^16.0.7",
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1"
   },
   "devDependencies": {
     "babel-plugin-react-compiler": "1.0.0",
     "eslint": "^9",
-    "eslint-config-next": "16.0.3"
+    "eslint-config-next": "^16.0.7"
   }
 }

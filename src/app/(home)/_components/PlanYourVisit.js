@@ -11,31 +11,37 @@ const PlanYourVisit = () => {
     {
       image: '/toons/penguin-no-parking.png',
       title: 'Parking',
+      alt: 'Illustration of a penguin gesturing "no" in front of a car to indicate parking restrictions',
       desc: 'Park along nearby residential streets. Please don\'t block driveways. Avoid parking in front of The Bugg House (marked with traffic cones) and do not park in front of our neighbor\'s home that is also decorated (7727 Don Dr NE).',
     },
     {
       image: '/toons/penguins-shushing.png',
       title: 'Be a Good Neighbor',
+      alt: 'Illustration of penguins with fingers to their beaks in a shushing gesture',
       desc: 'Keep volume reasonable and help us maintain a peaceful environment for the families who live here.',
     },
     {
       image: '/toons/penguin-sidewalk-only.png',
       title: 'Sidewalks Only',
+      alt: 'Illustration of a penguin pointing to a sidewalk path',
       desc: 'Stick to sidewalks and walking paths so everyone can explore the display safely.',
     },
     {
       image: '/toons/penguin-watching-kids.png',
       title: 'Watch the Little Ones',
+      alt: 'Illustration of a parent penguin watching over smaller penguins',
       desc: 'Keep children close and avoid touching the displays. Some pieces are old, delicate, and a little pokey. Staying hands off keeps everyone safe.',
     },
     {
       image: '/toons/santa-no-money.png',
       title: 'No Money Accepted',
+      alt: 'Illustration of Santa Claus holding up his hand to decline monetary donations',
       desc: 'We don\'t accept tips or monetary donations at the house.',
     },
     {
       image: '/toons/penguin-food-donation.png',
       title: 'Optional Food Drive Items',
+      alt: 'Illustration of a penguin holding canned food items for donation',
       desc: 'If you\'d like to give, we encourage non-perishable food donations to support local families this season.',
     },
   ];
@@ -92,7 +98,7 @@ const PlanYourVisit = () => {
             >
               <Image
                 src={item.image}
-                alt={item.title + " at The Bugg Lights"}
+                alt={item.alt}
                 width={200}
                 height={200}
                 style={{

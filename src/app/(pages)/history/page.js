@@ -63,10 +63,7 @@ export default function Page() {
           position="alternate"
           sx={{
             "&::before": {
-              backgroundColor:
-                theme.palette.mode === "dark"
-                  ? "rgba(255,255,255,0.08)"
-                  : "rgba(0,0,0,0.06)",
+              backgroundColor: "rgba(255,255,255,0.08)",
             },
           }}
         >
@@ -74,7 +71,6 @@ export default function Page() {
             <AnimatedTimelineItem
               key={event.id}
               event={event}
-              alignOpposite={index % 2 === 0}
             />
           ))}
         </Timeline>

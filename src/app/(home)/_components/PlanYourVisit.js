@@ -84,7 +84,7 @@ const PlanYourVisit = () => {
       </Glass>
       <Grid container spacing={4}>
         {posters.map((image, index) => (
-          <Grid size={{ xs: 1, md: 4 }} key={index}>
+          <Grid size={{ xs: 12, md: 4 }} key={index}>
             <Image
               src={image.src}
               alt={image.alt}

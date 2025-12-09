@@ -82,6 +82,19 @@ const PlanYourVisit = () => {
         </Typography>
         <Typography variant="body1">Please tag us on social media @bugglights</Typography>
       </Glass>
+      <Grid container spacing={4}>
+        {posters.map((image, index) => (
+          <Grid size={{ xs: 1, md: 4 }} key={index}>
+            <Image
+              src={image.src}
+              alt={image.alt}
+              width={800}
+              height={1000}
+              style={{ width: '100%', height: 'auto' }}
+            />
+          </Grid>
+        ))}
+      </Grid>
       <Grid container spacing={2}>
         {guidelines.map((item, index) => (
           <Grid item size={{ xs: 12, md: 4 }} key={index}>
@@ -115,19 +128,6 @@ const PlanYourVisit = () => {
                 </Typography>
               </Box>
             </Glass>
-          </Grid>
-        ))}
-      </Grid>
-      <Grid container spacing={4}>
-        {posters.map((image, index) => (
-          <Grid size={{ xs: 1, md: 4 }} key={index}>
-            <Image
-              src={image.src}
-              alt={image.alt}
-              width={800}
-              height={1000}
-              style={{ width: '100%', height: 'auto' }}
-            />
           </Grid>
         ))}
       </Grid>

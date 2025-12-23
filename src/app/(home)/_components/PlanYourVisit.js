@@ -52,12 +52,8 @@ const PlanYourVisit = () => {
       alt: "Santa will be at The Bugg Lights every Friday and Saturday, December 23rd, and Christmas Eve.",
     },
     {
-      src: '/posts/hot-chocolate.png',
-      alt: "Enjoy free hot chocolate every Friday and Saturday at The Bugg Lights.",
-    },
-    {
-      src: '/posts/christmas-carol-concert.jpg',
-      alt: "There will be a Christmas Carol Concert on December 19th and 20th at The Bugg Lights.",
+      src: '/posts/hot-chocolate-eve.png',
+      alt: "Enjoy free hot chocolate December 23rd and 24th at The Bugg Lights.",
     }
   ];
 
@@ -82,7 +78,7 @@ const PlanYourVisit = () => {
         </Typography>
         <Typography variant="body1">Please tag us on social media @bugglights</Typography>
       </Glass>
-      <Grid container spacing={4}>
+      <Grid container spacing={4} justifyContent="center">
         {posters.map((image, index) => (
           <Grid size={{ xs: 12, md: 4 }} key={index}>
             <Image

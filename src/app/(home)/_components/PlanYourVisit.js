@@ -53,7 +53,11 @@ const PlanYourVisit = () => {
     },
     {
       src: '/posts/hot-chocolate-eve.png',
-      alt: "Enjoy free hot chocolate December 23rd and 24th at The Bugg Lights.",
+      alt: "Enjoy free hot chocolate December 23 and 24 at The Bugg Lights.",
+    },
+    {
+      src: '/posts/food-truck.png',
+      alt: "Food Truck Nights with Aces Fry Guy on December 23 and 24 at the north side of The Bugg Lights, serving flavored fries, chicken sandwiches, and tamales."
     }
   ];
 

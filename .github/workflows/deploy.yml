@@ -7,29 +7,21 @@ on:
 
 jobs:
   deploy:
-    runs-on: [self-hosted, bugg-lights]
+    runs-on: [self-hosted, sfo3-02]
 
     defaults:
       run:
-        working-directory: /var/www/bugg-lights
+        working-directory: /srv/sites/bugglights.com/_/app
 
     steps:
-      - name: Stop PM2 process
-        run: pm2 stop bugg-lights || echo "PM2 process not running, continuing"
-
-      - name: Update repository
+      - name: Update repository in place
         run: |
           git fetch origin
           git checkout main
           git reset --hard ${{ github.sha }}
 
-      - name: Install dependencies
-        run: npm ci
+      - name: Build and (re)start container
+        run: docker compose up -d --build app
 
-      - name: Build application
-        run: npm run build
-
-      - name: Restart PM2 process
-        run: |
-          pm2 start bugg-lights
-          pm2 save
+      - name: Prune dangling images
+        run: docker image prune -f

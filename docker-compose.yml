@@ -1,0 +1,8 @@
+name: bugg-lights
+services:
+  app:
+    build: .
+    image: bugg-lights:local
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:13020:3000"

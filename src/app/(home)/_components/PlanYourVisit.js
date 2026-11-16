@@ -33,12 +33,6 @@ const PlanYourVisit = () => {
       desc: 'Keep children close and avoid touching the displays. Some pieces are old, delicate, and a little pokey. Staying hands off keeps everyone safe.',
     },
     {
-      alt: 'Cartoon Santa at The Bugg Lights encouraging visitors to donate canned food instead of money.',
-      image: '/toons/santa-no-money.png',
-      title: 'No Money Accepted',
-      desc: 'We don\'t accept tips or monetary donations at the house.',
-    },
-    {
       alt: 'Cartoon penguin placing a canned good into a Storehouse donation box at The Bugg Lights food drive.',
       image: '/toons/penguin-food-donation.png',
       title: 'Optional Food Drive Items',

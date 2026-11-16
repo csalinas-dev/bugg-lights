@@ -46,21 +46,6 @@ const PlanYourVisit = () => {
     },
   ];
 
-  const posters = [
-    {
-      src: '/posts/santa-schedule.jpg',
-      alt: "Santa will be at The Bugg Lights every Friday and Saturday, December 23rd, and Christmas Eve.",
-    },
-    {
-      src: '/posts/hot-chocolate-eve.png',
-      alt: "Enjoy free hot chocolate December 23 and 24 at The Bugg Lights.",
-    },
-    {
-      src: '/posts/food-truck.png',
-      alt: "Food Truck Nights with Aces Fry Guy on December 23 and 24 at the north side of The Bugg Lights, serving flavored fries, chicken sandwiches, and tamales."
-    }
-  ];
-
   return (
     <Box
       sx={{
@@ -78,23 +63,10 @@ const PlanYourVisit = () => {
           Plan Your Visit
         </Typography>
         <Typography variant="body1" gutterBottom>
-          The Bugg Lights shine every night from Thanksgiving to New Year&apos;s. Opening night begins at 6pm, and all following nights run from 5pm to 10pm. Take your time as you walk through, enjoy the lights, snap photos, and soak in the holiday atmosphere while being mindful of the neighborhood.
+          The Bugg Lights shine every night from Thanksgiving to New Year&apos;s. Hours are 6pm to 9pm Sunday through Thursday, and 6pm to 10pm on Fridays and Saturdays. Take your time as you walk through, enjoy the lights, snap photos, and soak in the holiday atmosphere while being mindful of the neighborhood.
         </Typography>
         <Typography variant="body1">Please tag us on social media @bugglights</Typography>
       </Glass>
-      <Grid container spacing={4} justifyContent="center">
-        {posters.map((image, index) => (
-          <Grid size={{ xs: 12, md: 4 }} key={index}>
-            <Image
-              src={image.src}
-              alt={image.alt}
-              width={800}
-              height={1000}
-              style={{ width: '100%', height: 'auto' }}
-            />
-          </Grid>
-        ))}
-      </Grid>
       <Grid container spacing={2}>
         {guidelines.map((item, index) => (
           <Grid item size={{ xs: 12, md: 4 }} key={index}>
